@@ -10,30 +10,57 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FpPowerSensor", "FpPowerSen
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FpPwrSensorDll", "FpPwrSensorDll\FpPwrSensorDll.vcxproj", "{A70CA29E-67E0-4638-B6F1-8EA751F1770D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FpPowerDisplay", "FpPowerDisplay\FpPowerDisplay.csproj", "{16E45A13-21CB-487C-8A13-B0D3B6E29A58}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A70CA29E-67E0-4638-B6F1-8EA751F1770D} = {A70CA29E-67E0-4638-B6F1-8EA751F1770D}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
 		Release|x64 = Release|x64
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Debug|Any CPU.Build.0 = Debug|x64
 		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Debug|x64.ActiveCfg = Debug|x64
 		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Debug|x64.Build.0 = Debug|x64
 		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Debug|x86.ActiveCfg = Debug|Win32
 		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Debug|x86.Build.0 = Debug|Win32
+		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Release|Any CPU.ActiveCfg = Release|x64
+		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Release|Any CPU.Build.0 = Release|x64
 		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Release|x64.ActiveCfg = Release|x64
 		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Release|x64.Build.0 = Release|x64
 		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Release|x86.ActiveCfg = Release|Win32
 		{1C1057A6-F2E0-4745-89C6-F79CB7757ADC}.Release|x86.Build.0 = Release|Win32
+		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Debug|Any CPU.Build.0 = Debug|x64
 		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Debug|x64.ActiveCfg = Debug|x64
 		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Debug|x64.Build.0 = Debug|x64
 		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Debug|x86.ActiveCfg = Debug|Win32
 		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Debug|x86.Build.0 = Debug|Win32
+		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Release|Any CPU.ActiveCfg = Release|x64
+		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Release|Any CPU.Build.0 = Release|x64
 		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Release|x64.ActiveCfg = Release|x64
 		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Release|x64.Build.0 = Release|x64
 		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Release|x86.ActiveCfg = Release|Win32
 		{A70CA29E-67E0-4638-B6F1-8EA751F1770D}.Release|x86.Build.0 = Release|Win32
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Debug|x64.Build.0 = Debug|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Debug|x86.Build.0 = Debug|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Release|x64.ActiveCfg = Release|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Release|x64.Build.0 = Release|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Release|x86.ActiveCfg = Release|Any CPU
+		{16E45A13-21CB-487C-8A13-B0D3B6E29A58}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

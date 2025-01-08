@@ -58,7 +58,7 @@ FpPowerSensor::FpPowerSensor()
     ioBuf[1] = 0x00;
     ret = write1(bus, i2cAddr, i2cSpeed, offset, ioBuf, 2, &bytesWritten);
     if (ret)
-        printf("Configured sensor at 0x%02X for continuous conversion\n", i2cAddr);
+        printf("Configured SHUNT_CAL: 0x%02X%02X\n", ioBuf[0], ioBuf[1]);
     else
         printf("Write failed\n");
     ret = read1(bus, i2cAddr, i2cSpeed, offset, 2, ioBuf, &bytesRead);
@@ -89,7 +89,7 @@ uint16_t FpPowerSensor::getRegister(INA232_Register reg)
     // read the specified Sensor over I2C interface
     memset(ioBuf, 0, sizeof(ioBuf));
     ret = read1(bus, i2cAddr, i2cSpeed, ureg, nbrBytes, ioBuf, &bytesRead);
-    if (!ret)
+    if (ret)
         printf("We read %u bytes and returned 0x%02X%02X\n", bytesRead, ioBuf[0], ioBuf[1]);
     else
         printf("Read failed\n");
