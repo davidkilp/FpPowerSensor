@@ -35,7 +35,7 @@ extern "C" PWRSENSOR_API double FpPwr_getCurrent(FpPowerSensor* p);
 
 Find the .NET GUI application, FpPowerDisplay.exe, and launch it. 
 
-![screenshot](https://github.com/davidkilp/FpLtg/blob/master/FpTempDisplay_screenshot.jpg)
+![screenshot](https://github.com/davidkilp/FpPowerSensor/blob/master/FpPowerDisplay_screenshot.jpg)
 
 Click the Start button will intitiate update the data from the sensor every 2-seconds.
 

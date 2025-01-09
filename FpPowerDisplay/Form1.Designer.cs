@@ -150,9 +150,9 @@
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(32, 165);
             label2.Name = "label2";
-            label2.Size = new Size(136, 21);
+            label2.Size = new Size(154, 21);
             label2.TabIndex = 10;
-            label2.Text = "Continout Update:";
+            label2.Text = "Continuous Updates:";
             // 
             // labelState
             // 

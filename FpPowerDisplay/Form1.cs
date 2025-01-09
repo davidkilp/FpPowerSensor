@@ -14,7 +14,7 @@ namespace FpPowerDisplay
             if (!InitPowerSensor())
             {
                 // Kill the application
-                System.Environment.Exit(1);
+               // System.Environment.Exit(1);
             }
         }
 
@@ -30,6 +30,7 @@ namespace FpPowerDisplay
             {
                 MessageBox.Show("Power Sensor hardware not detected.\nRestart application or system\n" + ex.Message);
                 labelState.Text = "Power Sensor hardware not detected.";
+                buttonStart.Enabled = false;
                 return false;
             }
 
