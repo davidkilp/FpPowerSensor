@@ -39,10 +39,10 @@ FpPowerSensor::FpPowerSensor()
         throw std::runtime_error("No INA232 Sensor found");
     }
 
-    // Configure for continous operation @ 1100 usec, ADCRANGE=1
+    // Configure for continous operation: 256 averaged samples @ 4156 usec conversion time, ADCRANGE=1
     offset = (unsigned int)INA232_Register::CONFIG_REG;
-    ioBuf[0] = 0x55;
-    ioBuf[1] = 0x27;
+    ioBuf[0] = 0x5B;
+    ioBuf[1] = 0xB7;
     ret = write1(bus, i2cAddr, i2cSpeed, offset, ioBuf, 2, &bytesWritten);
     if (ret)
         printf("Configured sensor at 0x%02X for continuous conversion\n", i2cAddr);

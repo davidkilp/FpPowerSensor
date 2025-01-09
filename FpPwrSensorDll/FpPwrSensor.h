@@ -28,11 +28,11 @@ private:
 	unsigned int i2cAddr = 0x4B;
 	const char* bus = "user";
 	int16_t _twos_compliment_to_int(int16_t val, uint8_t bits);
-	double _Current_LSB = 0.000500;		// 500 uA/LSB  = ~ _I_max / pow(2.0, 15.0) x 8;
-	double _I_max = 10.0;				// 10 A expected max current
-	double _BusVoltageStep = 0.0016;	// 1.6 mV/step
+	double _Current_LSB = 0.000500;			// 500 uA/LSB  = ~ _I_max / pow(2.0, 15.0) x 8;
+	double _I_max = 10.0;					// 10 A expected max current
+	double _BusVoltageStep = 0.0016;		// 1.6 mV/step
 	double _ShutVoltStep_R0 = 0.0000025;	// 2.5 uV/step ADCRANGE=0
-	double _ShutVoltStep_R1 = 0.0000000625;	// 625 nV/step ADCRANGE=1	
+	double _ShutVoltStep_R1 = 0.000000625;	// 625 nV/step ADCRANGE=1	
 
 public:
 	FpPowerSensor();
