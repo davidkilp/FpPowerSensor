@@ -5,17 +5,29 @@
 #include <iostream>
 #include <Windows.h>
 
-
 #include "FpPwrSensor.h"
 
-int main()
+int main(int argc, char *argv[])
 {
+	bool continuous = false;
+
+	if (argc > 1) {
+		if (std::string(argv[1]) == "-c") {
+			continuous = true;
+			std::cout << "Continuous mode enabled\n";
+		}
+        else {
+            std::cout << "Usage: FpPowerSensor [-c] continuous mode\n";
+            return 1;
+        }
+	}
+
     std::cout << "Facepod Power Sensor Test Start\n";
 
     // initialize Sensor
     FpPowerSensor *pSensor = FpPwr_Instantiate();
 
-    while (1) {
+    while (continuous) {
 #if 0
         // NOTE: with lower-level debugging output enabled this will not be displayed correctly
         std::cout << "BUS Voltage: " << FpPwr_getBusVoltage(pSensor) << " V" << std::endl;
@@ -36,7 +48,7 @@ int main()
         val = FpPwr_getPower(pSensor);
         std::cout << "Power: " << val << " Watts" << std::endl;
 
-        Sleep(2000);
+        if (continuous) Sleep(2000);
     }
 
     return 0;
