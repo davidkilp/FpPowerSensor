@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
     // initialize Sensor
     FpPowerSensor *pSensor = FpPwr_Instantiate();
 
-    while (continuous) {
+    do {
 #if 0
         // NOTE: with lower-level debugging output enabled this will not be displayed correctly
         std::cout << "BUS Voltage: " << FpPwr_getBusVoltage(pSensor) << " V" << std::endl;
@@ -49,7 +49,7 @@ int main(int argc, char *argv[])
         std::cout << "Power: " << val << " Watts" << std::endl;
 
         if (continuous) Sleep(2000);
-    }
+    } while (continuous);
 
     return 0;
 }
